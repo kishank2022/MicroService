@@ -8,6 +8,7 @@ public class UserServiceApplication {
 
 	public static void main(String[] args) {
 		System.out.println("Fire mode on ");
+		System.out.println("ok");
 		SpringApplication.run(UserServiceApplication.class, args);
 	}
 
