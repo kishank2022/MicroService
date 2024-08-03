@@ -31,6 +31,7 @@ public class HotelController {
 	}
 	
 	// get Single Hotel
+	// get hotel by id 
 	@GetMapping("/{hotel_id}")
 	public ResponseEntity<Hotel> getHotelDetails(@PathVariable String hotel_id){
 		Hotel hotel1 = this.hotelService.getHotel(hotel_id);
