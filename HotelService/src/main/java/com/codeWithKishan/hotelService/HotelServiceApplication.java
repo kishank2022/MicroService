@@ -8,6 +8,7 @@ public class HotelServiceApplication {
 
 	public static void main(String[] args) {
 		System.out.println("Fire mode on ");
+		System.out.println("Hotel 1 ");
 		SpringApplication.run(HotelServiceApplication.class, args);
 	}
 
