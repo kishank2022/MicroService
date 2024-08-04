@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,4 +47,16 @@ public class HotelController {
 		return ResponseEntity.status(HttpStatus.OK).body(hotels);
 	}
 	
+	@PutMapping("/")
+	public ResponseEntity<Hotel> updateHotel(@RequestBody Hotel hotel)
+	{
+		Hotel updatedHotel = this.hotelService.updateHotel(hotel);
+		return new ResponseEntity<Hotel>(updatedHotel, HttpStatus.OK);
+	}
+	
+	@DeleteMapping("/{hotel_id}")
+	public ResponseEntity<String> deleteHotelById(@PathVariable String hotel_id){
+		String result = this.hotelService.deleteHotel(hotel_id);
+		return ResponseEntity.status(HttpStatus.OK).body(result);
+	}
 }
