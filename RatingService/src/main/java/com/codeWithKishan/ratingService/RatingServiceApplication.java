@@ -10,6 +10,7 @@ public class RatingServiceApplication {
 		System.out.println("Rating service fire mode on ");
 		System.out.println(" two ");
 		System.out.println("three ");
+		System.out.println("four");
 		SpringApplication.run(RatingServiceApplication.class, args);
 	}
 
