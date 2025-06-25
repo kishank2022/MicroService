@@ -10,6 +10,7 @@ public class UserServiceApplication {
 		System.out.println("Fire mode on ");
 		SpringApplication.run(UserServiceApplication.class, args);
 		// test2 
+		System.out.println("hello");
 	}
 
 }
